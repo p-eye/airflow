@@ -219,6 +219,8 @@ class TestPinotDbApiHook:
         self.conn = conn = mock.MagicMock()
         self.conn.host = "host"
         self.conn.port = "1000"
+        self.conn.login = ""
+        self.conn.password = ""
         self.conn.conn_type = "http"
         self.conn.extra_dejson = {"endpoint": "query/sql"}
         self.cur = mock.MagicMock(rowcount=0)
