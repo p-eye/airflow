@@ -33,6 +33,8 @@ class TestPinotAdminHook:
         self.conn = conn = mock.MagicMock()
         self.conn.host = "host"
         self.conn.port = "1000"
+        self.conn.login = ""
+        self.conn.password = ""
         self.conn.extra_dejson = {}
 
         class PinotAdminHookTest(PinotAdminHook):
